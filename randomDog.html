@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script>
-        function chooseDog(){
+        function chooseDog() {
             fetch("https://api.thedogapi.com/v1/images/search").then(res => res.json()).then(data => {
                 $('#dogPic').empty()
                 let url = data['0']['url']
@@ -16,28 +17,31 @@
             })
         }
 
-        
+
 
     </script>
 
     <style>
-        div{
+        div {
             margin-top: 10px;
         }
-        .wrap{
+
+        .wrap {
             width: 700px;
             margin: auto;
         }
-        .dogName{
+
+        .dogName {
             border: 1px solid black;
             padding: 5px;
             font-size: 20px;
         }
-
     </style>
 </head>
+
 <body>
     <div class="wrap">
+        <h1>나는야 freshman!</h1>
         <h1>JQuery와 fetch조합을 연습하자!</h1>
         <hr>
         <h2>3. 랜덤 강아지 api를 이용하기</h2>
@@ -46,14 +50,16 @@
         </p>
         <button onclick="chooseDog()">강아지를 보자</button>
         <div class="dogName">
-            dog name : <input> 
+            dog name : <input>
         </div>
         <div class="dogPic" id="dogPic">
-            <img height="700" width="700" src="https://render.fineartamerica.com/images/rendered/default/flat/pouch/images/artworkimages/medium/3/pug-dog-lover-i-didnt-choose-the-pug-life-the-pug-life-choose-me-kanig-designs-transparent.png?&targetx=188&targety=-3&imagewidth=394&imageheight=474&modelwidth=777&modelheight=474&backgroundcolor=000000&orientation=0&producttype=pouch-regularbottom-medium">
+            <img height="700" width="700"
+                src="https://render.fineartamerica.com/images/rendered/default/flat/pouch/images/artworkimages/medium/3/pug-dog-lover-i-didnt-choose-the-pug-life-the-pug-life-choose-me-kanig-designs-transparent.png?&targetx=188&targety=-3&imagewidth=394&imageheight=474&modelwidth=777&modelheight=474&backgroundcolor=000000&orientation=0&producttype=pouch-regularbottom-medium">
         </div>
     </div>
 
 
 
 </body>
+
 </html>
